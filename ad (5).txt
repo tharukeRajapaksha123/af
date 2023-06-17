@@ -1,0 +1,231 @@
+SOLID -> Single Responsibility,Open-Close,Liskov Substitution,Interace segrgation,Dependency Inversion
+S- class should have only one reason to change,class should have only one job
+O - objects or entities should be open for extension, closed for modification
+L - Every subclass should be able to substitude their parent class
+I- clients should not be force to implement methods they do not use
+D- Higher level mdulse should not depend on lower level modulses, but they should depend on abstractions
+
+Aproachin the solution
+Divide and conquer
+KISS - Keep it simple and stupid, 
+Learn espeacion from mistakes
+Always remember why sofrware exiss
+remember that you are not the user 
+
+Express JS is a fast, unopinionated, and
+minimalist web framework for Node.js
+• It was created in 2010 by TJ Holowaychuk
+and is now maintained by the Node.js
+Foundation
+• Express JS is widely used for building web
+applications and APIs
+• Why use Express JS? It provides a simple and
+flexible way to handle HTTP requests and
+responses, making it easy to build scalable
+and maintainable applications.
+Middleware is a function that sits
+between the client and the server and
+can modify the request or response
+• Express JS has built-in middleware
+functions for handling requests, parsing
+data, and serving static files
+• You can use third-party middleware
+functions for tasks like logging,
+authentication, and caching
+• You can create your own middleware
+functions to handle specific tasks or
+modify the request/response as needed
+
+A RESTful API is an API that follows the REST (Representational State
+Transfer) architecture style
+• Express JS is well-suited for building RESTful APIs because of its routing and
+middleware capabilities
+• To create a RESTful API, you define routes that correspond to the different
+HTTP methods (GET, POST, PUT, DELETE) and the resources you want to
+expose
+• You can use middleware functions to handle tasks like input validation,
+authentication, and rate limiting
+• RESTful APIs should follow certain principles, such as using HTTP status
+codes to indicate success or failure, using meaningful URIs to identify
+resources, and providing a consistent interface for interacting with the API.
+24
+REST (Representational State
+Transfer) is an architectural
+style for building web servicesREST APIs allow clients to
+interact with server-side
+resources over the internet
+using HTTP methods (GET,
+POST, PUT, DELETE)
+REST APIs are widely used for
+building web applications and
+mobile appsWhy use REST API? It provides a
+simple and standardized way to
+build scalable and interoperable
+systems.
+REST APIs should be designed to follow certain principles, such as:
+• Using HTTP methods to indicate the type of operation being
+performed (GET for reading, POST for creating, PUT for updating,
+DELETE for deleting)
+• Using meaningful URIs (Uniform Resource Identifiers) to identify
+resources (e.g., /users, /products/123)
+• Using HTTP status codes to indicate the success or failure of a request
+(e.g., 200 OK, 404 Not Found, 500 Internal Server Error)
+• Providing a consistent interface for interacting with the API
+• Using hypermedia (links) to enable clients to discover and navigate the
+API
+HTTP method: The type of operation
+being performed (e.g., GET, POST, PUT,
+DELETE)
+• URI: The location of the resource being
+accessed (e.g., /users, /products/123)
+• Headers: Additional information about
+the request (e.g., Content-Type,
+Authorization)
+• Body (optional): Data being sent as part
+of the request (e.g., JSON payload)
+HTTP status code: Indicates the
+success or failure of the request
+(e.g., 200 OK, 404 Not Found, 500
+Internal Server Error)
+• Headers: Additional information
+about the response (e.g., Content-
+Type, Cache-Control)
+• Body: Data being sent as part of the
+response (e.g., JSON payload)
+TTP status codes are 3-digit numbers that indicate the status of a client's request to a server.
+The first digit of the status code defines the class of response, while the last two digits do not
+have any classification role.
+• 1xx Informational
+• 2xx Success
+• 3xx Redirection
+• 4xx Client Error
+• 5xx Server Error
+200 - OK *
+201 - Created *
+202 - Accepted
+204 - No content *
+HTTP code
+examples
+301 - Moved permanently
+302 - Found
+304 - Not modified *
+400 - Bad request *
+401 - Unauthorized *
+403 - Forbidden *
+404 - Not found *
+405 - Method not allowed
+• 409 - Conflict *
+• 412 - Precondition failed
+• 418 – An interesting code check 😉
+• 500 - Internal server error *
+• 502 - Bad gateway
+• 503 - Service unavailable
+Authentication is the process of verifying the identity of a
+client making a request
+• REST APIs can use different authentication mechanisms,
+such as:
+• Basic authentication: The client sends a base64-encoded
+username and password in the Authorization header
+• Token-based authentication: The client sends a token (e.g.,
+JWT) in the Authorization header
+• OAuth 2.0: A protocol for authorization that allows a user to
+grant a third-party application access to their resources
+REST APIs can evolve over time and new versions may
+introduce changes that are not backward compatible
+• API versioning is the practice of creating different
+versions of the API to handle these changes
+• Versioning can be done by:
+• Using a version number in the URI (e.g., /v1/users)
+• Using a version number in the Accept header (e.g.,
+Accept: application/json; version=1.0)
+• Using content negotiation to select the appropriate
+version based on the client's request
+
+Maven is a popular built tool for Java-based projects.
+Maven simplifies the process of managing project dependencies and building applications.
+Maven provides a wide range of plugins for performing common build tasks.
+Maven supports the concept of repositories, which are centralized locations for storing and sharing
+project artifacts.
+Maven makes it easy to share and reuse code across projects by providing a standardized way to
+manage dependencies and build settings.
+
+Built tools are software programs that automate the process of building and packaging
+software applications.
+Built tools help developers to manage dependencies, compile code, run tests, and package
+applications into distributable artifacts.
+Maven is a popular built tool for Java-based projects that simplifies the process of
+managing project dependencies and building applications.
+Maven uses a declarative XML-based configuration file called pom.xml to manage project
+dependencies and build settings.
+Other popular built tools for Java-based projects include Gradle, Ant, and Ivy, each with their
+own strengths and weaknesses.
+Choosing the right built tool for a project depends on factors such as project complexity,
+team preferences, and community support.
+
+The most fundamental aspect of Spring and Spring Boot is Dependency Injection (DI) or Inversion of
+Control (IoC)
+We can create loosely coupled applications that can be easily tested and maintained using these design
+patterns. The Spring framework also includes several out-of-the-box modules, namely:
+Spring MVC
+Spring Security
+Spring ORM
+Spring Test
+Spring AOP
+Spring Web Flow
+Spring JDBC.
+These modules make web applications more functional and reduce development time significantly.
+
+Dependanct Inhectin
+A type of Inversion of control.
+Passing the dependency at runtime (mostly) into the class without concreate dependencies.
+Resulting context is low coupling between classes.
+@Component
+Making class Spring container aware as a Component.
+@Service
+Making class Spring container aware as a Service.
+@Repository
+Making class Spring container aware as a DAO.
+@RestController
+Making class Spring container aware as a REST controller.
+@Configurations
+Spring aware configuration class.
+@Autowired
+Setter based - @Autowired on top of the setter
+Constructor based - @Autowired on top of the constructor
+Field based - @Autowired on top of the field (highly discouraged)
+
+Spring framework can be used for several tasks, including
+Developing serverless applications
+Building scalable microservices
+Securing the server-side of your application
+Asynchronous application development
+Automating tasks by creating batches
+An event-driven architecture
+
+
+
+Fully featured robust framework mainly targeted for Microservices application development.
+A solution for cumbersome configuration Spring Framework has.
+Support for microservices.
+Easy integration with multiple other libraries and frameworks (Cloud, Circuit breakers)
+Embedded server for development and deployments.
+
+MAIN FEATURES OF SPRING BOOT?
+Embedded server eliminates the need for complex application development
+Starter dependencies that facilitate building and configuring apps
+Automated Spring configuration
+Metrics, health check, and other reports
+Support for microservices.
+Everything in Spring Boot is pre-configured. We simply need to use the proper configuration to use a
+specific functionality. If we want to create a REST API, we can use Spring Boot
+
+MICROSERVICES WITH SPRING BOOT
+Spring Boot is a popular framework that simplifies the development and deployment of microservices
+It provides a suite of tools and features that address the challenges of microservices, including:
+Embedded web server
+Auto-configuration
+Health checks
+Distributed tracing
+Service discovery and registration
+Load balancing
+Configuration management
